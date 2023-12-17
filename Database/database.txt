@@ -1,0 +1,53 @@
+
+Database Queries for Oil BILLING SYSTEM Project
+
+
+1 - Create database with in mysql
+
+create database obs;
+
+2 - Select the database you just created
+
+use obs;
+
+describe login;
+
+3 - Create our first Table in the selected database with name login
+
+create table login(meter_no varchar(20), username varchar(30), name varchar(30), password varchar(20), user varchar(20)); 
+
+select * from login;
+
+4- Create the second table to store more information of user
+
+create table customer(name varchar(20), bill_no varchar(20), address varchar(50), city varchar(30), state varchar(30), email varchar(50), phone varchar(20));
+
+select * from customer;
+
+
+5 - Create the third table to store the bill information of the user
+
+create table bill_info(bill_no varchar(20), bill_location varchar(50), phase_code varchar(20), bill_type varchar(20), days varchar(20));
+
+select * from bill_info;
+
+
+6 - Create the Tax table to store tax related information
+
+create table tax(cost_per_gallon varchar(20), service_charge varchar(20), service_tax varchar(20), clean_bd_tax varchar(20), fixed_tax varchar(20));
+
+select * from tax;
+
+
+7 - Now inset values in the tax table
+
+insert into tax values('250','15','7','16','18');
+
+select * from tax;
+
+
+8 - Create Bill table to store oil bill information of the user
+
+create table bill(bill_no varchar(20), month varchar(30), gallons varchar(20), totalbill varchar(20), status varchar(20));
+
+select * from bill;
